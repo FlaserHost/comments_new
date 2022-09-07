@@ -1,0 +1,250 @@
+@media (max-width: 769px)
+{
+    .header
+    {
+        background-color: #ddd;
+    }
+    
+    .control-panel
+    {
+        width: 70px;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .fa-xmark
+    {
+        left: calc(100% + -25px);
+        bottom: calc(100% + 7px);
+    }
+}
+
+@media (max-width: 500px)
+{
+    .sort
+    {
+        justify-content: center;
+    }
+
+    .comment-info
+    {
+        min-width: 110px;
+    }
+
+    .comment-body
+    {
+        font-size: 14px;
+    }
+
+    .cancel-edit
+    {
+        padding: 10px 41px 10px;
+    }
+
+    .send-btn
+    {
+        width: 100%;
+    }
+
+    .header
+    {
+        justify-content: space-between;
+    }
+
+    .content
+    {
+        padding-bottom: 0;
+        min-height: 100%;
+        padding-top: 65px;
+    }
+    
+
+    .header,
+    .comments,
+    .user-name-block
+    {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .user-name-block
+    {
+        font-size: 15px;
+        white-space: nowrap;
+        padding-left: 12px;
+    }
+
+    .lk
+    {
+        width: 110px;
+    }
+
+    .adaptive
+    {
+        margin-left: auto;
+        width: auto;
+        padding: 0 12px;
+    }
+
+    .pagination,
+    .field-comment-box
+    {
+        padding: 0 10px;
+    }
+
+    .btn-block
+    {
+        padding: 5px 10px;
+    }
+
+    .buttons-wrapper
+    {
+        width: 366px;
+    }
+
+    .fa-xmark
+    {
+        left: calc(100% + -25px);
+        bottom: calc(100% + 7px);
+    }
+
+    .reg-field
+    {
+        width: 178px;
+    }
+
+    .entry-field ~ .invalid-feedback,
+    .pass ~ .invalid-feedback,
+    .field-first-name-field .invalid-feedback,
+    .field-second-name-field .invalid-feedback
+    {
+        padding-top: 5px;
+    }
+
+    .entry-field ~ .invalid-feedback,
+    .pass ~ .invalid-feedback
+    {
+        font-size: 14px;
+    }
+
+    .field-first-name-field .invalid-feedback,
+    .field-second-name-field .invalid-feedback
+    {
+        font-size: 11px;
+    }
+    
+    .main-container
+    {
+        display: block;
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 376px)
+{
+    .sort
+    {
+        font-size: 14px;
+    }
+    
+    .cancel-edit
+    {
+        padding-left: 32px;
+        padding-right: 33px;
+    }
+    
+    .buttons-wrapper > .send-btn
+    {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 321px)
+{
+    .avatar > figure
+    {
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .avatar
+    {
+        height: 35px;
+    }
+    
+    .comment-info
+    {
+        min-width: 100%;
+    }
+    
+    .full-name,
+    .comment-date
+    {
+        font-size: 13px;
+    }
+    
+    .comment
+    {
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .control-panel
+    {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        flex-direction: row;
+        background-color: transparent;
+    }
+    
+    .control-panel > div
+    {
+        display: flex;
+    }
+    
+    .control-panel > div:first-child
+    {
+        justify-content: flex-start;
+        padding-left: 30px;
+    }
+    
+    .control-panel > div:last-child
+    {
+        justify-content: flex-end;
+        padding-right: 30px;
+    }
+    
+    .cancel-edit,
+    .buttons-wrapper > .send-btn
+    {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .user-name-block
+    {
+        padding-left: 0;
+    }
+    
+    .modal-content > div
+    {
+        font-size: 12px;
+    }
+    
+    .reg-field
+    {
+        width: 127px;
+    }
+    
+    .field-first-name-field .invalid-feedback,
+    .field-second-name-field .invalid-feedback
+    {
+        font-size: 8px;
+    }
+}
+
