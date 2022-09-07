@@ -1,0 +1,614 @@
+:root
+{
+    --login-form-color: #3498db;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Calibri, sans-serif;
+}
+
+html, body, .main-container
+{
+    width: 100%;
+    height: 100%;
+}
+
+body
+{
+    background-image: url("../../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main-container
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header
+{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: flex-end;
+    background: linear-gradient(90deg, rgba(255,255,255,0.3389065098695728) 0%, rgba(221,221,221,1) 77%, rgba(221,221,221,1) 100%);
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.user-name-block
+{
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.lk
+{
+    width: 190px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.lk:hover
+{
+    background-color: rgba(150, 150, 150, .4);
+}
+
+.fa-user,
+.enter,
+.fa-door-open,
+.exit
+{
+    transition: .3s;
+}
+
+.lk:hover .middle .fa-user,
+.lk:hover .middle .enter
+{
+    color: var(--login-form-color);
+}
+
+.lk:hover .middle .fa-door-open,
+.lk:hover .middle .exit
+{
+    color: red;
+}
+
+.middle
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.middle i
+{
+    font-size: 20px;
+}
+
+.middle span
+{
+    margin-left: 10px;
+}
+
+.content
+{
+    width: 100%;
+    flex-grow: 1;
+    padding: 176px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.comments
+{
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 20px 0;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    box-shadow: 0 0 15px 10px #fff;
+}
+
+.sort
+{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+
+a
+{
+    text-decoration: none;
+    transition: .3s;
+    position: relative;
+}
+
+.sort a
+{
+    color: var(--login-form-color);
+}
+
+.sort a:after
+{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1.5px;
+    background-color: red;
+    transition: .3s;
+}
+
+.sort a:hover
+{
+    color: red;
+}
+
+.sort a:hover:after
+{
+    width: 100%;
+}
+
+.comment
+{
+    display: flex;
+    border: 2px solid #ddd;
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: #fffdeb;
+}
+
+.comment:not(:last-child)
+{
+    margin-bottom: 10px;
+}
+
+.comment-info
+{
+    width: 150px;
+    border-right: 2px solid #ddd;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.comment-info,
+.comment-body,
+.control-panel
+{
+    padding: 10px
+}
+
+.avatar
+{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar > figure
+{
+    border-radius: 50%;
+    font-size: 50px;
+    overflow: hidden;
+    background-color: #ddd;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-name,
+.comment-date
+{
+    font-size: 14px;
+    text-align: center;
+}
+
+.full-name
+{
+    padding: 3px 0;
+}
+
+.comment-body
+{
+    width: 100%;
+    max-width: 940px;
+    overflow: hidden;
+    word-break: break-word;
+}
+
+.control-panel
+{
+    width: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.control-panel > div
+{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.control-panel > div i
+{
+    transition: .3s;
+    cursor: pointer;
+}
+
+.control-panel > div:first-child i:hover,
+.orange
+{
+    color: orange
+}
+
+.control-panel > div:last-child i:hover
+{
+    color: red
+}
+
+.comment-input
+{
+    padding-top: 10px;
+}
+
+.comment-box
+{
+    width: 100%;
+    height: 160px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    transition: border-color .3s;
+}
+
+.comment-box:not(:disabled):focus
+{
+    border-color: var(--login-form-color);
+}
+
+.comment-box:disabled::placeholder
+{
+    color: red;
+}
+
+.btn-block
+{
+    width: 100%;
+    padding: 5px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cancel-edit,
+.send-btn
+{
+    outline: none;
+    padding: 10px 50px 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 20px;
+    transition: .3s;
+    color: yellow;
+}
+
+.cancel-edit
+{
+    background-color: var(--login-form-color);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.cancel-edit:hover
+{
+    background-color: yellow;
+    color: var(--login-form-color);
+}
+
+.send-btn
+{
+    background-color: brown;
+}
+
+.send-btn:disabled
+{
+    background-color: rgba(165, 42, 42, .5);
+    color: rgba(255, 255, 0,.5);
+}
+
+.send-btn:not(:disabled):hover
+{
+    background-color: yellow;
+    color: brown;
+    cursor: pointer;
+}
+
+.modal-area
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.modal
+{
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.fa-xmark
+{
+    position: absolute;
+    left: calc(100% + 3px);
+    bottom: 100%;
+    color: var(--login-form-color);
+    font-size: 36px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.fa-xmark:hover
+{
+    text-shadow: 0 0 10px var(--login-form-color);
+    transform: rotateZ(90deg);
+}
+
+.modal-content
+{
+    width: 100%;
+}
+
+.modal-content > div:first-child
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.modal-content > div:first-child a
+{
+    padding: 10px;
+    width: calc(50% - 10px);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: #999;
+    font-weight: 600;
+}
+
+.modal-content > div:first-child a:after
+{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--login-form-color);
+    transition-property: left, right;
+    transition-duration: .3s;
+}
+
+.modal-content > div:first-child a:first-child:after
+{
+    left: 100%;
+}
+
+.modal-content > div:first-child a:last-child:after
+{
+    right: 100%;
+}
+
+.modal-content > div:first-child a.active-tab:first-child:after
+{
+    left: 0;
+}
+
+.modal-content > div:first-child a.active-tab:last-child:after
+{
+    right: 0;
+}
+
+.modal-content > div:first-child a.active-tab
+{
+    color: #000;
+}
+
+::placeholder
+{
+    color: #ccc;
+}
+
+.entry-field,
+.reg-field
+{
+    padding: 13px 15px;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color .3s;
+}
+
+.entry-field
+{
+    width: 100%;
+}
+
+.reg-field
+{
+    width: 234px;
+}
+
+.entry-field:focus
+{
+    border-color: var(--login-form-color);
+}
+
+#login-form > div
+{
+    margin-bottom: 13px;
+}
+
+.invalid-feedback
+{
+    color: red;
+}
+
+.entry-btn,
+.reg-btn
+{
+    width: 100%;
+    padding: 14px;
+    outline: none;
+    border: none;
+    font-size: 19px;
+    background-color: var(--login-form-color);
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.pass
+{
+    position: relative;
+}
+
+.pass i
+{
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 13px;
+    color: #888;
+    cursor: pointer;
+}
+
+.pagination
+{
+    display: flex;
+    list-style-type: none;
+}
+
+.pagination > li
+{
+    background-color: #fff;
+}
+
+.pagination > li.disabled,
+.pagination > li a
+{
+    padding: 5px 15px;
+    display: block;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    color: #000;
+}
+
+.pagination > li.active a
+{
+    background-color: var(--login-form-color);
+    color: #fff;
+}
+
+.pagination > li:not(li.active) a
+{
+    color: var(--login-form-color);
+}
+
+.pagination > li.disabled,
+.pagination > li.disabled span
+{
+    cursor: default;
+}
+
+.reg-fields
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.field-first-name-field .invalid-feedback,
+.field-second-name-field .invalid-feedback
+{
+    font-size: 14px;
+}
+
+.empty-field
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-field p
+{
+    text-align: center;
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.buttons-wrapper
+{
+    width: 386px;
+    display: flex;
+    justify-content: space-between;
+}
