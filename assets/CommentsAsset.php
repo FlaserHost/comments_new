@@ -10,8 +10,8 @@ class CommentsAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css',
-        'css/comments/style.css',
-        'css/comments/adaptive.css'
+        'css/style.css',
+        'css/adaptive.css'
     ];
     public $js = [
         'js/comments/script.js'
